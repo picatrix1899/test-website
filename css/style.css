@@ -1,0 +1,85 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: darkcyan;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+  grid-template-rows: 20% auto;
+  position: relative;
+}
+
+.main .head {
+  width: 100%;
+  height: 100%;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background-color: yellow;
+  display: grid;
+  grid-template-rows: auto 80px;
+}
+
+.main .head .navbar {
+  grid-row: 2 / 3;
+}
+
+.left-sidebar {
+  width: 20%;
+  height: 80%;
+  background-color: tomato;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.left-sidebar .left-sidenavbar {
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.left-sidebar .left-sidenavbar a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  background-color: gray;
+  padding-left: 6px;
+}
+
+.left-sidebar .left-sidenavbar a:hover {
+background-color: lightgreen;
+}
+
+.main .content {
+  width: 100%;
+  height: 2000px;
+  min-height: 100%;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background-color: lightgray;
+}
+
+.head .sticky {
+  background-color: lightcoral;
+  position: fixed;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  bottom: calc(100% - 80px);
+}
+
+.left-sidebar .sticky {
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 80%;
+  background-color: lightpink;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
