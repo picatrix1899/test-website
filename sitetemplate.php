@@ -71,7 +71,7 @@
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
         <script>
            document.getElementById('content').innerHTML =
-           marked(<?php echo json_encode($content) ?>, {gfm: true, breaks: true});
+           marked(<?php echo json_encode($content) ?>, {gfm: true});
         </script>
       </div>
     </div>

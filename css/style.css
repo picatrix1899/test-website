@@ -93,6 +93,15 @@ html, body {
   color: white;
 }
 
+.content pre {
+  background-color: lightgoldenrodyellow;
+}
+
+.content pre code {
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .head .navbar .breadcrumbs .breadcrumb {
   height: 25px;
   background-color: transparent;
