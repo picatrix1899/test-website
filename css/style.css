@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0;
-  background-color: darkcyan;
+  background-color: black;
 }
 
 .main {
@@ -10,7 +10,7 @@ html, body {
   width: 100%;
   display: grid;
   grid-template-columns: 20% auto 20%;
-  grid-template-rows: 20% auto;
+  grid-template-rows: 50% auto;
   position: relative;
 }
 
@@ -19,7 +19,7 @@ html, body {
   height: 100%;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  background-color: yellow;
+  background-color: #111111;
   display: grid;
   grid-template-rows: auto 80px;
 }
@@ -31,10 +31,11 @@ html, body {
 .left-sidebar {
   width: 20%;
   height: 80%;
-  background-color: tomato;
+  background-color: #222222;
   position: fixed;
   left: 0;
   bottom: 0;
+  border-radius: 10px;
 }
 
 .left-sidebar .left-sidenavbar {
@@ -61,11 +62,12 @@ background-color: lightgreen;
   min-height: 100%;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  background-color: lightgray;
+  background-color: #444444;
+  border-radius: 20px;
 }
 
 .head .sticky {
-  background-color: lightcoral;
+  background-color: #222222;
   position: fixed;
   top: 0;
   left: 20%;
@@ -73,13 +75,14 @@ background-color: lightgreen;
   bottom: calc(100% - 80px);
 }
 
-.left-sidebar .sticky {
-  width: calc(100% - 20px);
-  margin-left: 10px;
-  margin-top: 10px;
-  height: 80%;
-  background-color: lightpink;
-  position: fixed;
-  left: 0;
-  bottom: 0;
+.head img {
+  grid-row: 1 / 2;
+  width: 95%;
+  height: 90%;
+  margin: 2.5%;
+}
+
+.content #content {
+  margin: 40px;
+  color: white;
 }
