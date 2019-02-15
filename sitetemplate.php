@@ -7,8 +7,9 @@
     <base href="/test-website/">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="node_modules/highlight.js/styles/obsidian.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.14.2/build/highlight.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
 
     <title>FZ</title>
   </head>
@@ -66,12 +67,24 @@
       </script>
 
       <div class="content">
-        <div id="content"></div>
+       <div id="content"></div>
+
+
 
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
         <script>
-           document.getElementById('content').innerHTML =
-           marked(<?php echo json_encode($content) ?>, {gfm: true});
+          document.getElementById('content').innerHTML = marked(<?php echo json_encode($content) ?>,
+          {
+            pedantic: false,
+            gfm: true,
+            tables: true,
+            highlight: function(code, lang)
+            {
+            var hljs_code = (hljs.highlight(lang, code, false)).value;
+
+            return hljs_code;
+            }
+          });
         </script>
       </div>
     </div>

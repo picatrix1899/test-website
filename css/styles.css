@@ -1,3 +1,48 @@
+.head .navbar .breadcrumbs .breadcrumb {
+  height: 25px;
+  background-color: transparent;
+  padding-top: 0;
+  margin: 0;
+}
+
+.content pre code {
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.content pre {
+  background-color: lightgoldenrodyellow;
+}
+
+.content #content {
+  margin: 40px;
+  color: white;
+}
+
+.head .image {
+  grid-row: 1 / 2;
+  width: 95%;
+  height: 90%;
+  margin: 2.5%;
+}
+
+.head .sticky {
+  background-color: #090909;
+  position: fixed;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  bottom: calc(100% - 90px);
+}
+
+.main .content {
+  width: 100%;
+  min-height: 100%;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background-color: #444444;
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -64,47 +109,7 @@ html, body {
   padding-left: 6px;
 }
 
-.main .content {
-  width: 100%;
-  min-height: 100%;
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  background-color: #444444;
-}
-
-.head .sticky {
-  background-color: #090909;
-  position: fixed;
-  top: 0;
-  left: 20%;
-  right: 20%;
-  bottom: calc(100% - 90px);
-}
-
-.head .image {
-  grid-row: 1 / 2;
-  width: 95%;
-  height: 90%;
-  margin: 2.5%;
-}
-
-.content #content {
-  margin: 40px;
-  color: white;
-}
-
-.content pre {
-  background-color: lightgoldenrodyellow;
-}
-
-.content pre code {
-  color: #000000;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-.head .navbar .breadcrumbs .breadcrumb {
-  height: 25px;
-  background-color: transparent;
-  padding-top: 0;
-  margin: 0
+#content th, #content td{
+  border-bottom: 1px solid white;
+  padding-right: 10px;
 }
