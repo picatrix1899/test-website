@@ -1,22 +1,3 @@
-# Home
+# Stranger!
 
-## Test
-
-adfasdfasdfasd
-asdfasdf
-asdf
-asdf
-asdf
-
-```java
-string s = "";
-public void test()
-{
-  int i = 0;
-  String test = "lorem ipsum dolore me amed";
-}
-```
-
-| Test | Test |
-| ---- | ---- |
-|  bla | bla  |
+**Somehow you stumbled into my lair. I will try to ignore your presence. I'm shure it was by accient right? But I will watch you with wakeful eyes! Beware!**

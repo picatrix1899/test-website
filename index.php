@@ -1,17 +1,8 @@
 <?php
   
-  $content = '';
+include 'md-reader.php';
 
-  $handle = fopen("home.md", "r");
-  if ($handle) {
-      while (($line = fgets($handle)) !== false) {
-         $content = $content . $line;
-      }
-  
-      fclose($handle);
-  } else {
-      die("Error opening File!");
-  } 
+  $content = getHTMLFromMD('home.md');
 
   $links = array();  
 

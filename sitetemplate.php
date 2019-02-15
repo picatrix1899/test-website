@@ -7,7 +7,7 @@
     <base href="/test-website/">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="node_modules/highlight.js/styles/obsidian.css">
+    <link rel="stylesheet" href="node_modules/highlight.js/styles/arduino-light.css">
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.14.2/build/highlight.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
 
@@ -26,7 +26,7 @@
                   <a class="nav-link" href="">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="tutorials/">Tutorials</a>
+                  <a class="nav-link" href="glengine-tutorials/">LWJGL Engine Tutorials</a>
                 </li>
               </ul>
             </div>
@@ -34,9 +34,10 @@
           <nav class="breadcrumbs" aria-label="breadcrumb">
             <ol class="breadcrumb">
               <?php
-              foreach($breadcrumbs as $breadcrumb)
+              for($i = 0; $i < count($breadcrumbs); $i++)
               {
-                if($breadcrumb['current'])
+                $breadcrumb = $breadcrumbs[$i];
+                if($i == count($breadcrumbs) - 1)
                 {
                   echo '<li class="breadcrumb-item active" aria-current="page">' . $breadcrumb['name'] . '</li>';
                 }
@@ -67,26 +68,9 @@
       </script>
 
       <div class="content">
-       <div id="content"></div>
-
-
-
-        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-        <script>
-          document.getElementById('content').innerHTML = marked(<?php echo json_encode($content) ?>,
-          {
-            pedantic: false,
-            gfm: true,
-            tables: true,
-            highlight: function(code, lang)
-            {
-            var hljs_code = (hljs.highlight(lang, code, false)).value;
-
-            return hljs_code;
-            }
-          });
-        </script>
+        <?php echo $content ?>
       </div>
+
     </div>
     
     <div class="left-sidebar">
@@ -94,7 +78,7 @@
         <?php
           foreach ($links as $link)
           {
-            if($link['current'])
+            if($link['id'] == $currentId)
             {
               echo '<span class="sidebar-item-active">' .  $link['name'] . '</span>';
             }
